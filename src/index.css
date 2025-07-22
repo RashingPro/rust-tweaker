@@ -1,0 +1,45 @@
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    border: none;
+    padding-inline: 0;
+    padding-block: 0;
+    /*box-sizing: content-box;*/
+    appearance: none;
+    background: none;
+    max-width: 100vw;
+}
+
+svg {
+    display: block;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.titlebar {
+    app-region: drag;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.titlebar > * {
+    display: flex;
+    align-content: center;
+    app-region: no-drag;
+    margin: 10px;
+}
+
+.titlebar button > svg {
+    height: 100%;
+    width: auto;
+}
+
+.titlebar button {
+    cursor: pointer;
+    padding: 5%;
+    height: 100%;
+}
