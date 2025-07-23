@@ -1,8 +1,8 @@
 {
-  "name": "rust-settings-helper",
-  "productName": "rust-settings-helper",
-  "version": "1.0.0",
-  "description": "My Electron application description",
+  "name": "rust-tweaker",
+  "productName": "rust-tweaker",
+  "version": "0.0.1",
+  "description": "Empty description",
   "main": ".webpack/main",
   "scripts": {
     "start": "electron-forge start",
