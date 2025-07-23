@@ -65,8 +65,7 @@
     "react-dom": "19"
   },
   "resolutions": {
-    "find-up": "<=5.0.0",
-    "ajv": "8"
+    "find-up": "<=5.0.0"
   },
   "engines": {
     "yarn": ">=1.22",
