@@ -7,6 +7,10 @@ contextBridge.exposeInMainWorld("electronApi", {
         toggleMaximize: () => ipcRenderer.send("window.maximize")
     },
     constants: {
-        getTitleBarHeight: () => ipcRenderer.invoke("constants.getTitleBarHeight")
+        getTitleBarHeight: () => ipcRenderer.invoke("constants.getTitleBarHeight"),
+        getWindowTitle: () => ipcRenderer.invoke("constants.getWindowTitle")
+    },
+    events: {
+        rootLoaded: () => ipcRenderer.send("events.rootLoaded")
     }
 });

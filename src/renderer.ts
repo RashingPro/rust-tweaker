@@ -39,6 +39,10 @@ declare global {
             };
             constants: {
                 getTitleBarHeight(): Promise<number>;
+                getWindowTitle(): Promise<string>;
+            };
+            events: {
+                rootLoaded(): void;
             };
         };
     }

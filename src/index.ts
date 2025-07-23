@@ -24,14 +24,24 @@ const createWindow = async () => {
 
     mainWindow.setMenu(null);
 
-    await mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
-    mainWindow.show();
-    // mainWindow.webContents.openDevTools();
-
     ipcMain.on("window.close", () => mainWindow.close());
     ipcMain.on("window.minimize", () => (mainWindow.isMinimized() ? mainWindow.restore() : mainWindow.minimize()));
     ipcMain.on("window.maximize", () => (mainWindow.isMaximized() ? mainWindow.restore() : mainWindow.maximize()));
-    ipcMain.handle("constants.getTitleBarHeight", () => (rootHeight * 0.03));
+    ipcMain.handle("constants.getTitleBarHeight", () => rootHeight * 0.03);
+    ipcMain.handle("constants.getWindowTitle", () => mainWindow.getTitle());
+
+    await mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
+
+    await new Promise<void>((resolve) =>
+        ipcMain.on("events.rootLoaded", () => {
+            resolve();
+        })
+    );
+
+    console.log("root loaded");
+
+    mainWindow.show();
+    // mainWindow.webContents.openDevTools();
 };
 
 app.on("ready", createWindow);

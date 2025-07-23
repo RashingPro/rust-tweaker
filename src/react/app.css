@@ -1,0 +1,24 @@
+.titlebar {
+    app-region: drag;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.titlebar > * {
+    display: flex;
+    align-content: center;
+    user-select: none;
+    margin: 10px;
+}
+
+.titlebar button > svg {
+    height: 100%;
+    width: auto;
+}
+
+.titlebar button {
+    cursor: pointer;
+    padding: 5%;
+    height: 100%;
+}

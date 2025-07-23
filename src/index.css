@@ -18,27 +18,10 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-.titlebar {
+.app-drag {
     app-region: drag;
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
 }
 
-.titlebar > * {
-    display: flex;
-    align-content: center;
+.app-no-drag {
     app-region: no-drag;
-    margin: 10px;
-}
-
-.titlebar button > svg {
-    height: 100%;
-    width: auto;
-}
-
-.titlebar button {
-    cursor: pointer;
-    padding: 5%;
-    height: 100%;
 }
