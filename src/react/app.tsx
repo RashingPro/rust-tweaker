@@ -1,8 +1,8 @@
 import { createRoot } from "react-dom/client";
 import CopyIcon from "@rsuite/icons/Copy";
-import CloseIcon from '@rsuite/icons/Close';
-import CollaspedOutlineIcon from '@rsuite/icons/CollaspedOutline';
-import {useEffect, useRef, useState} from "react";
+import CloseIcon from "@rsuite/icons/Close";
+import CollaspedOutlineIcon from "@rsuite/icons/CollaspedOutline";
+import { useEffect, useRef, useState } from "react";
 
 const root = createRoot(document.body);
 root.render(<RootComponent />);

@@ -12,8 +12,8 @@ const createWindow = async () => {
     const rootWidth = primaryDisplay.workAreaSize.width;
 
     const mainWindow = new BrowserWindow({
-        height: 600,
         width: 800,
+        height: 600,
         show: false,
         frame: false,
         webPreferences: {
