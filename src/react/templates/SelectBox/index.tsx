@@ -51,6 +51,7 @@ export default function SelectBox({
                 tabIndex={0}
                 className={"select-box"}
                 ref={parentRef}
+                onBlur={(event) => event.relatedTarget != dropRef.current && setIsOpen(false)}
                 onClick={() => setIsOpen((val) => !val)}
                 style={{ width: width }}
             >
