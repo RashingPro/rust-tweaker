@@ -21,7 +21,6 @@ const createWindow = async () => {
             devTools: false
         }
     });
-
     mainWindow.setMenu(null);
 
     ipcMain.on("window.close", () => mainWindow.close());
@@ -37,8 +36,6 @@ const createWindow = async () => {
             resolve();
         })
     );
-
-    console.log("root loaded");
 
     mainWindow.show();
     // mainWindow.webContents.openDevTools();
