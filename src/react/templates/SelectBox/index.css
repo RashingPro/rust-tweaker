@@ -1,0 +1,20 @@
+.select-box-container {
+}
+
+.select-box,
+.select-box__drop {
+    border: 1px #343434 solid;
+    padding: 5px 15px;
+    border-radius: 0.5rem;
+}
+
+.select-box {
+    cursor: pointer;
+    user-select: none;
+}
+.select-box__drop {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
