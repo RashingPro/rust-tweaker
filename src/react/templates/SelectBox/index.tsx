@@ -39,11 +39,18 @@ export default function SelectBox({
     }, [options, defaultSelected]);
 
     useLayoutEffect(() => {
-        if (direction == "down")
-            setDropTop(parentRef.current.offsetTop + parentRef.current.offsetHeight + dropBoxPadding);
-        else setDropTop(parentRef.current.offsetTop - dropBoxPadding - dropRef.current.offsetHeight);
-        setDropLeft(parentRef.current.offsetLeft);
-    }, [width]);
+        if (parentRef.current && dropRef.current) {
+            if (direction == "down")
+                setDropTop(
+                    window.scrollY +
+                        parentRef.current.getBoundingClientRect().top +
+                        parentRef.current.offsetHeight +
+                        dropBoxPadding
+                );
+            else setDropTop(parentRef.current.offsetTop - dropBoxPadding - dropRef.current.offsetHeight);
+            setDropLeft(parentRef.current.offsetLeft);
+        }
+    }, [width, parentRef.current?.getBoundingClientRect()]);
 
     return (
         <div className={"select-box-container"}>
@@ -72,7 +79,6 @@ export default function SelectBox({
                             setSelectedIndex(index);
                             setIsOpen(false);
                         }}
-                        style={{ width: "fit-content" }}
                     >
                         {element}
                     </div>
