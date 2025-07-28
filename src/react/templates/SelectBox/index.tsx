@@ -64,7 +64,7 @@ export default function SelectBox({
                 onClick={() => setIsOpen((val) => !val)}
                 style={{ width: width }}
             >
-                <div style={{ width: "fit-content" }}>{selectedElement}</div>
+                <div style={{ width: "max-content" }}>{selectedElement}</div>
             </div>
 
             <div

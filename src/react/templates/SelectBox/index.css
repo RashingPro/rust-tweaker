@@ -1,6 +1,10 @@
 .select-box-container {
 }
 
+.select-box-container * {
+    box-sizing: content-box;
+}
+
 .select-box,
 .select-box__drop {
     background: #343434;
@@ -12,12 +16,15 @@
 .select-box {
     cursor: pointer;
     user-select: none;
+    height: fit-content;
 }
+
 .select-box__drop {
     position: absolute;
     display: flex;
     flex-direction: column;
     width: fit-content;
+    gap: 0.3rem;
 }
 
 .select-box__drop > * {
