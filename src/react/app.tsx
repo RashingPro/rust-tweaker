@@ -28,6 +28,8 @@ function TitleBar(props: { windowTitle: string; height: number }) {
             </div>
         </div>
     );
+}
+
 function RootComponent() {
     const [isLoaded, setIsLoaded] = useState(false);
     const titleBarHeight = useRef<number>(null);
