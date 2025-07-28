@@ -16,6 +16,7 @@ const createWindow = async () => {
         height: 600,
         show: false,
         frame: false,
+        title: "Rust Tweaker",
         webPreferences: {
             preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
             devTools: false
