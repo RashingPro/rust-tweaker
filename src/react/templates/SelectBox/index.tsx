@@ -6,13 +6,15 @@ export interface SelectBoxProps {
     dropBoxPadding?: number;
     defaultSelected?: number | string;
     options: React.ReactNode[];
+    className?: string;
 }
 
 export default function SelectBox({
     direction = "down",
     dropBoxPadding = 5,
     options,
-    defaultSelected = 0
+    defaultSelected = 0,
+    className
 }: SelectBoxProps) {
     if (options.length == 0) throw new Error("Options array is empty");
 
@@ -53,7 +55,7 @@ export default function SelectBox({
     }, [width, parentRef.current?.getBoundingClientRect()]);
 
     return (
-        <div className={"select-box-container"}>
+        <div className={"select-box-container" + (className ? ` ${className}` : "")}>
             <div
                 tabIndex={0}
                 className={"select-box"}
