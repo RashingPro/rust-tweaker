@@ -1,25 +1,38 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .titlebar {
     app-region: drag;
     display: flex;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
     background: #343434;
+    flex-wrap: wrap;
+    padding: 10px;
 }
 
 .titlebar > * {
     display: flex;
-    align-content: center;
+    align-items: center;
     user-select: none;
-    margin: 10px;
+    /*margin: 10px;*/
+    gap: 5px;
+    height: 100%;
 }
 
 .titlebar button > svg {
-    height: 100%;
-    width: auto;
+    height: 50%;
+    aspect-ratio: 1;
+    stroke-width: 2px;
 }
 
 .titlebar button {
     cursor: pointer;
-    padding: 5%;
+}
+
+.page-content {
     height: 100%;
 }
